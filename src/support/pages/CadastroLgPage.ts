@@ -28,7 +28,9 @@ export default class CadastroLgPage extends BasePage {
     await this.cadastroLgElements.getSenha().fill('@Teste9314');
     await this.cadastroLgElements.getConfirmarSenha().fill('@Teste9314');
 
-    await new Promise(f => setTimeout(f, 4000));
+    await new Promise(f => {
+      setTimeout(f, 6000);
+    });
     await this.cadastroLgElements.getBotaoCadastro().click({ force: true });
   }
 
